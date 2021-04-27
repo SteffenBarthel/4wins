@@ -1,0 +1,65 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.33.0.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: 076965ebbdfe75b680f74238d946dee59b894701e38e0c5521cbf666c17d209c
+
+name:           4winshaskell
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/githubuser/4winshaskell#readme>
+homepage:       https://github.com/githubuser/4winshaskell#readme
+bug-reports:    https://github.com/githubuser/4winshaskell/issues
+author:         Author name here
+maintainer:     example@example.com
+copyright:      2021 Author name here
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+    ChangeLog.md
+
+source-repository head
+  type: git
+  location: https://github.com/githubuser/4winshaskell
+
+library
+  exposed-modules:
+      Lib
+  other-modules:
+      Paths_4winshaskell
+  hs-source-dirs:
+      src
+  build-depends:
+      base >=4.7 && <5
+    , containers
+  default-language: Haskell2010
+
+executable 4winshaskell-exe
+  main-is: Main.hs
+  other-modules:
+      Paths_4winshaskell
+  hs-source-dirs:
+      app
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      4winshaskell
+    , base >=4.7 && <5
+    , containers
+  default-language: Haskell2010
+
+test-suite 4winshaskell-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Paths_4winshaskell
+  hs-source-dirs:
+      test
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      4winshaskell
+    , base >=4.7 && <5
+    , containers
+  default-language: Haskell2010
